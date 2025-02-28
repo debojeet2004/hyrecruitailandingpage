@@ -22,33 +22,41 @@ const faqData = [
         answer: "The AI interview process typically involves logging into the platform, selecting an interview type or job role, and then engaging in a simulated interview with an AI-powered virtual interviewer. The AI asks questions, analyzes responses, and provides feedback on factors like communication skills, content, and body language (if video is used)."
     },
     {
-        question: "How does the feedback system work?",
-        answer: "Our AI provides real-time feedback on your responses, analyzing factors like clarity, relevance, and completeness. After each session, you receive detailed analytics and specific improvement suggestions."
+        question: "How does HyRecruit AI ensure candidate authenticity?",
+        answer: "Our AI-driven screening process includes role-specific tests and automated resume verification to filter out unqualified or fraudulent candidates."
     },
     {
-        question: "Can I practice unlimited times?",
-        answer: "Yes, depending on your subscription plan. Pro and Enterprise users get unlimited interview sessions, while Basic plan users have a monthly limit of practice sessions."
+        question: "Can I integrate HyRecruit AI with my existing ATS?",
+        answer: "Yes! HyRecruit AI seamlessly integrates with most Applicant Tracking Systems (ATS) for a smooth hiring workflow."
     },
     {
-        question: "What types of interviews can I practice?",
-        answer: "We offer behavioral, technical, and role-specific interviews across various industries. You can practice everything from software engineering technical interviews to management behavioral assessments."
+        question: "How does AI-powered screening work?",
+        answer: "Candidates go through an AI-driven assessment based on the job role, and our system generates performance reports for easy evaluation."
     },
     {
-        question: "How realistic are the AI interviews?",
-        answer: "Our AI uses advanced natural language processing to create dynamic, context-aware conversations. The interview adapts to your responses just like a human interviewer would, providing a highly realistic experience backed by industry-standard interview patterns."
+        question: "Is HyRecruit AI suitable for all industries?",
+        answer: "Absolutely! Our AI-powered platform is designed to cater to diverse industries, from tech and finance to healthcare and beyond."
     },
     {
-        question: "What are the benefits of using an AI interview platform?",
-        answer: "AI interview platforms offer several benefits, including 24/7 availability for practice, consistent and unbiased evaluations, immediate feedback, and the ability to improve interview skills in a low-pressure environment. They also help candidates become more comfortable with interview scenarios and identify areas for improvement."
+        question: "How does HyRecruit AI reduce hiring time?",
+        answer: "We automate screening, shortlisting, and initial interviews, reducing manual work and helping you make faster hiring decisions."
     },
     {
-        question: "Is my data secure on the AI interview platform?",
-        answer: "Yes, we take data security very seriously. All user data is encrypted and stored securely. We comply with data protection regulations and do not share personal information with third parties without explicit consent. Users can also request to have their data deleted at any time."
+        question: "Can I customize the hiring process based on my company's needs?",
+        answer: "Yes! Our platform allows customization of hiring workflows, screening criteria, and interview structures."
     },
     {
-        question: "Can I use the AI interview platform on mobile devices?",
-        answer: "Yes, our AI interview platform is fully responsive and can be accessed on various devices, including smartphones and tablets. This allows you to practice interviews anytime, anywhere, as long as you have an internet connection."
+        question: "Is candidate data secure on HyRecruit AI?",
+        answer: "We prioritize data security with encrypted storage, compliance with global regulations, and strict access controls."
     },
+    {
+        question: "How do I get started with HyRecruit AI?",
+        answer: "Simply sign up on our platform, define your hiring requirements, and let our AI handle the rest!"
+    },
+    {
+        question: "Does HyRecruit AI support bulk hiring?",
+        answer: "Yes! Our platform efficiently handles bulk hiring by screening and shortlisting multiple candidates simultaneously, saving time and effort."
+    }
 ]
 
 const container = {

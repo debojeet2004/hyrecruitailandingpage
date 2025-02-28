@@ -1,7 +1,7 @@
 import { TypographyH2, TypographyP } from '@/components/typography'
 import React from 'react'
 import Container from './container'
-import { Button } from '@/components/ui/button'
+import CtaButton from './calCta'
 
 export default function Cta() {
     return (
@@ -12,7 +12,7 @@ export default function Cta() {
                     <TypographyP className='max-w-xl sm:max-w-3xl text-center text-xs sm:text-base'>
                         Pre-screen candidates efficiently with AI, get instant insights, and find top talent faster. Transform your hiring process today!
                     </TypographyP>
-                    <Button size="sm" className='sm:size-lg mt-2'>Book a Demo</Button>
+                    <CtaButton/>
                 </div>
                 <div className='absolute -bottom-[12rem] sm:-bottom-[18rem] -left-[8rem] sm:-left-[10rem] blur-[6rem] sm:blur-[8rem] w-[20rem] sm:w-[30rem] h-[20rem] sm:h-[30rem] rounded-full bg-pink-600'/>
                 <div className='absolute -top-[12rem] sm:-top-[18rem] -right-[8rem] sm:-right-[10rem] blur-[6rem] sm:blur-[10rem] w-[20rem] sm:w-[30rem] h-[20rem] sm:h-[30rem] rounded-full bg-purple-600'/>

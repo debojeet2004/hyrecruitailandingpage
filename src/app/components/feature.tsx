@@ -83,12 +83,12 @@ export default function Feature() {
                 <TypographyH2 className='text-center'> AI-Driven Features for <span className=" bg-gradient-to-r from-foreground via-purple-500 to-pink-500 text-transparent bg-clip-text">Smarter Hiring</span></TypographyH2>
                 <TypographyP className='text-center max-w-4xl'>transforms recruitment with intelligent automation, data-driven insights, and seamless candidate evaluation—making hiring faster, smarter, and effortless!</TypographyP>
             </div>
-            <div className=' mt-8 flex justify-center items-center  border-foreground'>
-            <BentoGrid>
-                {features.map((feature, idx) => (
-                    <BentoCard key={idx} {...feature} />
-                ))}
-            </BentoGrid>
+            <div className=' mt-8 flex justify-center items-center '>
+                <BentoGrid>
+                    {features.map((feature, idx) => (
+                        <BentoCard key={idx} {...feature} />
+                    ))}
+                  </BentoGrid>
             </div>
         </>
     )

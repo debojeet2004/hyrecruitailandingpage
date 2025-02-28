@@ -2,6 +2,7 @@
 import { TypographyH2, TypographyP } from "@/components/typography";
 import { useEffect, useState } from "react";
 import GradientChip from "@/components/ui/gradientChip";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 
 
@@ -116,7 +117,7 @@ export default function Testimonials() {
                             hover:from-purple-50/60 hover:via-white/60 hover:to-purple-100/60
                             dark:hover:from-purple-900/60 dark:hover:via-gray-900/60 dark:hover:to-purple-800/60">
                                 <div className="absolute top-4 right-4 opacity-10 text-purple-600 dark:text-purple-400 
-                                text-6xl font-serif group-hover:opacity-20 group-hover:scale-110 transition-all duration-300">"</div>
+                                text-6xl font-serif group-hover:opacity-20 group-hover:scale-110 transition-all duration-300">&quot;</div>
                                 <TypographyP className="text-purple-600 dark:text-purple-300 mb-6 relative z-10 
                                 group-hover:text-purple-700 dark:group-hover:text-purple-200 
                                 transition-colors duration-300 group-hover:translate-x-1">{testimonial.content}</TypographyP>
@@ -142,7 +143,7 @@ export default function Testimonials() {
                     ))}
                 </div>
             </div>
-            {/* <div className="w-full py-1 flex justify-between items-center">
+            <div className="hidden w-full py-1 justify-between items-center">
                 <div className="flex items-center justify-center gap-4 py-4 border border-foreground px-6 rounded-full">
                     <span className="text-2xl text-purple-600 dark:text-purple-400">❝</span>
                     <p className="text-lg font-medium text-gray-700 dark:text-gray-300">
@@ -175,7 +176,7 @@ export default function Testimonials() {
                         <ChevronRight className="w-4 h-4" />
                     </button>
                 </div>
-            </div> */}
+            </div>
         </div>
     )
 }

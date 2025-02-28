@@ -1,4 +1,10 @@
 import { cn } from "@/lib/utils"
+import { Poppins } from "next/font/google";
+const poppins = Poppins({
+    variable: "--font-poppins",
+    subsets: ["latin"],
+    weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  });
 
 export function TypographyH1({ children, className }: { children: React.ReactNode, className?: string }) {
     return (
@@ -87,4 +93,27 @@ export function TypographyMuted({ children, className }: { children: React.React
         </p>
     )
 }
-
+export function Body({ children, className }: {
+    children: React.ReactNode,
+    className?: string
+}) {
+    return (
+        <div
+            className={cn("text-[12px] md:text-[14px] font-normal tracking-tight lg:text-[20px]",poppins.className, className)}
+        >
+            {children}
+        </div>
+    )
+}
+export function Body2({ children, className }: {
+    children: React.ReactNode,
+    className?: string
+}) {
+    return (
+        <div
+            className={cn("text-[10px] md:text-[12px] font-normal tracking-tight lg:text-[16px] xl:text-[18px]",poppins.className, className)}
+        >
+            {children}
+        </div>
+    )
+}

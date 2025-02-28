@@ -1,7 +1,6 @@
+import { Body, Body2 } from "@/components/typography"
 import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react"
 import Link from "next/link"
-import { Body, Body2 } from "./website-typography"
-
 interface FooterLinkProps {
     href: string
     children: React.ReactNode
@@ -46,39 +45,37 @@ function FooterColumn({ title, links }: FooterColumnProps) {
 
 function Footer() {
     const columns: FooterColumnProps[] = [
-        {
-            title: "Product",
-            links: [
-                { label: "Features", href: "#features", title: "Explore PrepVerse Features" },
-                { label: "Pricing", href: "#pricing", title: "Explore PrepVerse Pricing" },
-                { label: "Testimonials", href: "#testimonials", title: "Explore PrepVerse Testimonials" },
-                { label: "FAQ", href: "#faq", title: "Explore PrepVerse FAQ" },
-            ],
-        },
-        {
-            title: "Company",
-            links: [
-                { label: "About Us", href: "/about" },
-                { label: "Careers", href: "/careers" },
-                { label: "Blog", href: "#blog" },
-                { label: "Contact", href: "/contact" },
-            ],
-        },
+        // {
+        //     title: "Product",
+        //     links: [
+        //         { label: "Features", href: "#features", title: "Explore PrepVerse Features" },
+        //         { label: "Pricing", href: "#pricing", title: "Explore PrepVerse Pricing" },
+        //         { label: "Testimonials", href: "#testimonials", title: "Explore PrepVerse Testimonials" },
+        //         { label: "FAQ", href: "#faq", title: "Explore PrepVerse FAQ" },
+        //     ],
+        // },
+        // {
+        //     title: "Company",
+        //     links: [
+        //         { label: "About Us", href: "/about" },
+        //         { label: "Careers", href: "/careers" },
+        //         { label: "Blog", href: "#blog" },
+        //         { label: "Contact", href: "/contact" },
+        //     ],
+        // },
         {
             title: "Legal",
             links: [
                 { label: "Privacy Policy", href: "/privacy", title: "PrepVerse Privacy Policy" },
                 { label: "Terms of Service", href: "/terms", title: "PrepVerse Terms of Service" },
                 { label: "Cookie Policy", href: "/cookies", title: "PrepVerse Cookie Policy" },
-                { label: "Shipping & Delivery Policy", href: "/shipping", title: "PrepVerse Shipping Policy" },
-                { label: "Refund Policy", href: "/refund", title: "PrepVerse Refund Policy" },
                 { label: "Contact Us", href: "/contact", title: "PrepVerse Contact Us" },
             ],
         },
     ]
 
     return (
-        <div className='container mx-auto py-8'>
+        <div className='container mx-auto py-8 p-4'>
             <div className='grid grid-cols-1 md:grid-cols-12 gap-8'>
                 {/* Brand Section */}
                 <div className='md:col-span-4 space-y-4'>
@@ -110,7 +107,7 @@ function Footer() {
                 </div>
                 {/* Navigation Columns */}
                 <div className='md:col-span-8'>
-                    <div className='grid grid-cols-2 md:grid-cols-3 gap-4'>
+                    <div className='flex justify-start md:justify-end items-center gap-4'>
                     {columns.map((column) => (
                         <FooterColumn key={column.title} {...column} />
                     ))}

@@ -19,13 +19,13 @@ const BentoGrid = ({ children, className, ...props }: BentoGridProps) => {
   return (
     <div
       className={cn(
-        "grid w-full auto-rows-[22rem] grid-cols-3 gap-4",
-        className,
+        "grid auto-rows-[16rem] sm:auto-rows-[18rem] md:auto-rows-[20rem] lg:auto-rows-[22rem] grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4",
+        className
       )}
       {...props}
-    >
+        >
       {children}
-    </div>
+        </div>
   );
 };
 
@@ -40,7 +40,7 @@ const BentoCard = ({
   <div
     key={name}
     className={cn(
-      "group relative col-span-3 md:col-span-2 lg:col-span-1 flex flex-col justify-between overflow-hidden rounded-[16px]",
+      "group relative col-span-3 sm:col-span-3 md:col-span-3 lg:col-span-1 flex flex-col justify-between overflow-hidden rounded-[16px]",
       // light styles
       "bg-gradient-to-br from-pink-50 to-purple-50/90 [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)]",
       // dark styles
@@ -50,19 +50,19 @@ const BentoCard = ({
       className,
     )}
     {...props}
-  >
+    >
     <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-pink-100/50 dark:to-purple-800/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
     <div>{background}</div>
-    <div className="pointer-events-none z-10 flex transform-gpu flex-col gap-1 p-4 sm:p-6 transition-all duration-300 group-hover:-translate-y-10">
-      <Icon className="h-8 w-8 sm:h-12 sm:w-12 origin-left transform-gpu text-purple-700 dark:text-purple-300 transition-all duration-300 ease-in-out group-hover:scale-75" />
-      <h3 className="text-lg sm:text-xl font-semibold text-purple-800 dark:text-purple-200">
-        {name}
+    <div className="pointer-events-none z-10 flex transform-gpu flex-col gap-1 p-3 sm:p-4 md:p-6 transition-all duration-300 group-hover:-translate-y-8 sm:group-hover:-translate-y-10">
+      <Icon className="h-6 w-6 sm:h-8 sm:w-8 md:h-12 md:w-12 origin-left transform-gpu text-purple-700 dark:text-purple-300 transition-all duration-300 ease-in-out group-hover:scale-75" />
+      <h3 className="text-base sm:text-lg md:text-xl font-semibold text-purple-800 dark:text-purple-200">
+      {name}
       </h3>
-      <p className="text-sm sm:text-base max-w-lg text-purple-600 dark:text-purple-400">{description}</p>
+      <p className="text-xs sm:text-sm md:text-base max-w-lg text-purple-600 dark:text-purple-400">{description}</p>
     </div>
     
     <div className="pointer-events-none absolute inset-0 transform-gpu transition-all duration-500 group-hover:bg-black/[.03] group-hover:dark:bg-purple-800/10 backdrop-blur-[1px]" />
-  </div>
+    </div>
 );
 
 export { BentoCard, BentoGrid };
