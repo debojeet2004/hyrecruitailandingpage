@@ -4,7 +4,7 @@ import Feature from "./components/feature";
 import Cta from "./components/cta";
 import FaqSection from "./components/faq";
 import { TypographyH1, TypographyP } from "@/components/typography";
-import Testimonials from "./components/testimonials";
+// import Testimonials from "./components/testimonials";
 import HowitWorks from "./components/howitworks";
 import Whyus from "./components/whyus";
 import CtaButton from "./components/calCta";
@@ -36,9 +36,9 @@ export default function Home() {
       <Container>
         <Feature/>
       </Container>
-      <Container >
+      {/* <Container >
         <Testimonials/>
-      </Container>
+      </Container> */}
       <Cta/>
       <Container className="rounded-[32px] ">
         <FaqSection/>

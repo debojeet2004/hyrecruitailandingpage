@@ -26,10 +26,6 @@ const faqData = [
         answer: "Our AI-driven screening process includes role-specific tests and automated resume verification to filter out unqualified or fraudulent candidates."
     },
     {
-        question: "Can I integrate HyRecruit AI with my existing ATS?",
-        answer: "Yes! HyRecruit AI seamlessly integrates with most Applicant Tracking Systems (ATS) for a smooth hiring workflow."
-    },
-    {
         question: "How does AI-powered screening work?",
         answer: "Candidates go through an AI-driven assessment based on the job role, and our system generates performance reports for easy evaluation."
     },
