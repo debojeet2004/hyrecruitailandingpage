@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
 import Container from './container';
-import { ThemeToggle } from '../themeToggle';
+// import { ThemeToggle } from '../themeToggle';
 import CtaButton from './calCta';
 
 const Navbar = () => {
@@ -15,7 +15,7 @@ const Navbar = () => {
                     </Link>
                     {/* Get Started Button */}
                     <div className="flex items-center gap-2">
-                        <ThemeToggle/>
+                        {/* <ThemeToggle/> */}
                         <CtaButton/>
                         
                     </div>

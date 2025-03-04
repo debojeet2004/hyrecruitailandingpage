@@ -1,5 +1,4 @@
 import Container from "./components/container";
-import { ScrollBasedVelocityDemo } from "./components/scrolldemo";
 import Tag from "./components/tag";
 import Feature from "./components/feature";
 import Cta from "./components/cta";
@@ -9,6 +8,7 @@ import Testimonials from "./components/testimonials";
 import HowitWorks from "./components/howitworks";
 import Whyus from "./components/whyus";
 import CtaButton from "./components/calCta";
+import Image from "next/image";
 
 
 export default function Home() {
@@ -22,14 +22,11 @@ export default function Home() {
           <TypographyP className="text-center max-w-4xl">We conduct AI-driven initial screenings tailored to specific roles. Our platform generates performance analytics and pre-evaluates candidates, giving companies a structured report to streamline hiring and make data-driven decisions efficiently.</TypographyP>
           <CtaButton/>
         </div>
-        <div className="relative flex justify-center items-start  h-[40rem] w-full overflow-visible">
+        <div className="relative flex justify-center items-start  h-fit w-full overflow-visible">
         <div className="z-10 absolute -top-20 translate-x-1 rounded-full w-[90rem] h-[20rem] blur-[180px] bg-gradient-to-r from-indigo-500/40 via-purple-600/40 to-teal-400/40" />
-          <div className="w-full h-full bg-background z-20 flex justify-center items-center rounded-[32px] ">
-            <h1>Illustration</h1>
-          </div>
+          <Image src="/HeroIllustration.png" alt="HyrecruitAi" width={1600} height={5300} className="object-fill z-20"/> 
         </div>
       </Container>
-      <ScrollBasedVelocityDemo />
       <Container>
         <Whyus/>
       </Container>

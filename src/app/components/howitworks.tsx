@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { ClipboardList, BrainCircuit, ShieldCheck, Briefcase } from 'lucide-react';
 import { TypographyH2, TypographyP } from '@/components/typography';
 import GradientChip from '@/components/ui/gradientChip';
+import Image from "next/image";
 
 interface Step {
   id: number;
@@ -24,21 +25,21 @@ export default function HowitWorks() {
       title: "Define Your Hiring Requirements",
       description: "Define your job roles, candidate requirements, and key preferences. Our system integrates seamlessly with your existing hiring workflows.",
       icon: <ClipboardList  className="w-6 h-6" />,
-      image: "https://images.unsplash.com/photo-1557838923-2985c318be48?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+      image: "illustration1"
     },
     {
       id: 2,
       title: "AI-Driven Screening & Shortlisting",
       description: "Our AI analyzes applications, evaluates candidate suitability, and ranks top talent based on data-driven insights, ensuring you get the best fit instantly.",
       icon: <BrainCircuit  className="w-6 h-6" />,
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+      image: "illustration2"
     },
     {
       id: 3,
       title: "Secure & Efficient Hiring Decisions",
       description: "Make confident hiring choices with AI-backed recommendations, ensuring data security, compliance, and a streamlined recruitment experience.",
       icon: <ShieldCheck  className="w-6 h-6" />,
-      image: "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+      image: "illustration3"
     }
   ];
 
@@ -82,7 +83,7 @@ export default function HowitWorks() {
           <TypographyP>Simplifies hiring with AI-driven efficiency, accuracy, and security. Here’s how it works</TypographyP>
         </div>
 
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center">
+        <div className="flex flex-col-reverse lg:flex-row gap-8 lg:gap-16 items-center">
           {/* Steps Column */}
           <div className="w-full lg:w-1/2 space-y-8">
             {steps.map((step) => (
@@ -140,15 +141,19 @@ export default function HowitWorks() {
               {steps.map((step) => (
                 <div 
                   key={step.id}
-                  className={`transition-opacity duration-500 border border-foreground ${
-                    step.id === activeStep ? 'opacity-100' : 'opacity-0 absolute inset-0'
+                  className={`transition-opacity duration-500 relative w-full h-full ${
+                  step.id === activeStep ? 'flex' : 'hidden'
                   }`}
                 >
-                  {/* <img 
-                    src={step.image} 
-                    alt={`Step ${step.id}`} 
-                    className="w-full h-[300px] sm:h-[400px] lg:h-[500px] object-cover rounded-lg"
-                  /> */}
+                  <Image 
+                  src={`/${step.image}.png`} 
+                  alt={`Step ${step.id}`} 
+                  width={900}
+                  height={600}
+                  
+                  className="object-cover rounded-lg"
+                  priority={step.id === 1}
+                  />
                 </div>
               ))}
             </div>
