@@ -13,7 +13,7 @@ export default function CtaButton() {
     return (
         <Button
             ata-cal-namespace="30min"
-            data-cal-link="debojeet-karmakar/30min"
+            data-cal-link="madhusamala/30min"
             className="group bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-500 dark:to-indigo-500 hover:from-blue-700 hover:to-indigo-700 dark:hover:from-blue-600 dark:hover:to-indigo-600 text-white shadow-md transition-all"
         >
             Book a Demo 
